@@ -3,6 +3,7 @@
 #   For "my_org", there must be a "_organizations/my_org" directory
 #   the url property is used to make a relative URL pointing to
 #   files within this org directory
+# TODO: 'topics' should be renamed to 'files'
 - organization: my_org
   name: My Org
   topics:
