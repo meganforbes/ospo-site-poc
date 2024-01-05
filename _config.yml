@@ -22,8 +22,7 @@ title: CURIOSS Doc Sharing
 # email: your-email@example.com
 description: >-
   Proof of concept for a potential OSPO site.
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-  incididunt ut labore et dolore magna aliqua.
+  This is a short descriptive snippet for your site
 baseurl: "/ospo-site-poc" # the subpath of your site, e.g. /blog
 url: "jabrah.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
@@ -33,6 +32,10 @@ url: "jabrah.github.io" # the base hostname & protocol for your site, e.g. http:
 theme: minima
 plugins:
   - jekyll-feed
+
+collections:
+  organizations:
+    output: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.

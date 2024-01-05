@@ -1,0 +1,52 @@
+---
+layout: page
+---
+
+{{ content }}
+
+<h1>Test</h1>
+
+{% assign organization = site.data.organizations | where: "organization", page.org_id %}
+
+{% for org in organization %}
+  {% if forloop.first %}
+  <table>
+    <thead>
+      <tr>
+        <td>Topic</td>
+        <td>Title</td>
+        <td>Description</td>
+        <td>Link</td>
+      </tr>
+    </thead>
+    <tbody>
+      {% for topic in org.topics %}
+        <tr>
+          <td>{{ topic.topic }}</td>
+          <td>{{ topic.title }}</td>
+          <td>{{ topic.description }}</td>
+          <td>
+            <a href="{{ topic.url | relative_url}}">
+              {{ topic.url | split: "/" | last }}
+            </a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+{% endfor %}
+
+
+
+
+<div>
+  {%- if page.previous -%}
+    <a href="{{ page.previous.url }}">Previous</a>
+  {%- endif -%}
+  <a href="{{ "/" | relative_url }}">Home</a>
+  {%- if page.next -%}
+    <a href="{{ page.next.url }}">Next</a>
+  {%- endif -%}
+</div>
+

@@ -1,0 +1,73 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: home
+---
+
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+  incididunt ut labore et dolore magna aliqua. Felis eget nunc lobortis mattis aliquam 
+  faucibus. Fames ac turpis egestas sed. Volutpat diam ut venenatis tellus in. Lorem 
+  ipsum dolor sit amet consectetur. Lectus urna duis convallis convallis tellus id 
+  interdum. Congue quisque egestas diam in arcu. Id ornare arcu odio ut. Urna condimentum 
+  mattis pellentesque id nibh tortor id aliquet. Lorem ipsum dolor sit amet consectetur. 
+  Ultrices neque ornare aenean euismod elementum nisi quis. Ullamcorper sit amet risus 
+  nullam eget felis eget. Morbi tincidunt ornare massa eget egestas purus viverra accumsan 
+  in.
+</p>
+
+<p>
+  Cursus euismod quis viverra nibh cras. Pharetra pharetra massa massa ultricies. 
+  Vestibulum morbi blandit cursus risus at ultrices. Accumsan tortor posuere ac ut 
+  consequat semper viverra nam. Laoreet non curabitur gravida arcu. Purus non enim 
+  praesent elementum facilisis leo vel fringilla. At volutpat diam ut venenatis 
+  tellus in. Sem integer vitae justo eget. Et egestas quis ipsum suspendisse ultrices 
+  gravida. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit sed. 
+  Sed sed risus pretium quam vulputate dignissim suspendisse. Eget mi proin sed 
+  libero enim sed. A diam maecenas sed enim ut sem viverra aliquet eget. Nibh ipsum 
+  consequat nisl vel pretium lectus quam id leo. Ut placerat orci nulla pellentesque 
+  dignissim enim sit amet. Nunc scelerisque viverra mauris in aliquam sem fringilla 
+  ut. Orci ac auctor augue mauris augue neque gravida. Vitae turpis massa sed 
+  elementum tempus. Vulputate enim nulla aliquet porttitor lacus luctus accumsan. 
+  Dolor sit amet consectetur adipiscing elit ut aliquam.
+</p>
+
+<div style="display: flex; justify-content: space-around;">
+  <div>
+    {%- if site.organizations -%}
+      <h2 class="post-list-heading">Docs by Institution</h2>
+      <ul style="list-style: none;">
+        {%- for org in site.organizations -%}
+          <li>
+            <a href={{org | absolute_url }}>
+              <h3>{{ org.title | escape }}</h3>
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  </div>
+  
+  <div>
+    <h2 class="post-list-heading">Docs by Topic</h2>
+    <ul style="list-style: none;">
+      <li>
+        <a href="{{ site.baseUrl }}/syllabi">
+          <h3>Course syllabi</h3>
+        </a>
+      </li>
+      <li>
+        <a href="{{ site.baseUrl }}/jobs">
+          <h3>Job descriptions</h3>
+        </a>
+      </li>
+      <li>
+        <a href="{{ site.baseUrl }}/training_outlines">
+          <h3>Training outlines</h3>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+

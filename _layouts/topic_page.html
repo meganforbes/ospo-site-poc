@@ -1,0 +1,47 @@
+---
+layout: page
+topic:
+---
+
+{{ content }}
+
+
+{% assign orgs = site.collections | find: "label", "organizations" %}
+{% for org in orgs %}
+  {% assign files = org.files %}
+  {% for file in files %}
+    <p>
+      {{ file | inspect }}
+    </p>
+  {% endfor %}
+{% endfor %}
+
+
+
+<table>
+  <thead>
+    <tr>
+      <td>Institution</td>
+      <td>Title</td>
+      <td>Description</td>
+      <td>Link</td>
+    </tr>
+  </thead>
+  <tbody>
+    {% for org in site.data.organizations %}
+      {% assign topics = org.topics | where: "topic", page.topic %}
+      {% for topic in topics %}
+        <tr>
+          <td>{{ org.name }}</td>
+          <td>{{ topic.title }}</td>
+          <td>{{ topic.description }}</td>
+          <td>
+            <a href="{{ topic.url | relative_url }}">
+              {{ topic.url | split: "/" | last }}
+            </a>
+          </td>
+        </tr>
+      {% endfor %}
+    {% endfor %}
+  </tbody>
+</table>

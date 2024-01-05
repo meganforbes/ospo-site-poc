@@ -1,0 +1,40 @@
+# url format is important here
+#   It needs to be the relative path to the specific file
+#   For "my_org", there must be a "_organizations/my_org" directory
+#   the url property is used to make a relative URL pointing to
+#   files within this org directory
+- organization: my_org
+  name: My Org
+  topics:
+    - title: Job Title 1
+      topic: organizations/my_org/jobs/Job description
+      url: cmc-10-2016-173.pdf
+      description: |-
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet 
+        nulla facilisi morbi tempus iaculis urna id volutpat. 
+    - url: "organizations/my_org/syllabi/Johnson_2018_Markup Bodies.pdf"
+      title: Class name 1?
+      topic: Course syllabus
+      description: |-
+        Eget mauris pharetra et ultrices neque ornare aenean. Quisque 
+        egestas diam in arcu.
+        Odio euismod lacinia at quis risus sed.
+    - url: "organizations/my_org/syllabi/What_We_Teach_When_We_Teach_DH_Digital_Humanities.pdf"
+      title: Class name 2?
+      topic: Course syllabus
+      description: |-
+        Imperdiet sed euismod nisi porta. Eu feugiat pretium nibh ipsum 
+        consequat nisl. Scelerisque eleifend donec pretium vulputate 
+        sapien nec. Et malesuada fames ac turpis egestas integer eget 
+        aliquet. Pellentesque eu tincidunt tortor aliquam nulla facilisi. 
+        Lorem ipsum dolor sit amet consectetur adipiscing elit.
+- organization: org_2
+  name: Organization 2
+  topics:
+    - topic: Course syllabus
+      title: Moo
+      url: organizations/org_2/syllabi/aor-manifests.csv
+    - topic: Course syllabus
+      title: Moo 2
+      url: https://example.com/syllabus
