@@ -34,7 +34,7 @@
   topics:
     - topic: Course syllabus
       title: Moo
-      url: organizations/org_2/syllabi/aor-manifests.csv
+      url: organizations/org_2/doc.csv
     - topic: Course syllabus
       title: Moo 2
       url: https://example.com/syllabus
