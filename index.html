@@ -40,7 +40,7 @@ layout: home
       <ul style="list-style: none;">
         {%- for org in site.organizations -%}
           <li>
-            <a href={{org | absolute_url }}>
+            <a href={{ org.url | relative_url }}>
               <h3>{{ org.title | escape }}</h3>
             </a>
           </li>

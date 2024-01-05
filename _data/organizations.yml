@@ -7,8 +7,8 @@
   name: My Org
   topics:
     - title: Job Title 1
-      topic: organizations/my_org/jobs/Job description
-      url: cmc-10-2016-173.pdf
+      topic: Job description
+      url: organizations/my_org/jobs/cmc-10-2016-173.pdf
       description: |-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet 

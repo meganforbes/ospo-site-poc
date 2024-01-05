@@ -5,6 +5,10 @@ topic:
 
 {{ content }}
 
+{% comment %}
+
+TODO: temporarily keeping if we want to direclty
+use the org.files property to populate the Link field
 
 {% assign orgs = site.collections | find: "label", "organizations" %}
 {% for org in orgs %}
@@ -15,8 +19,7 @@ topic:
     </p>
   {% endfor %}
 {% endfor %}
-
-
+{% endcomment %}
 
 <table>
   <thead>
